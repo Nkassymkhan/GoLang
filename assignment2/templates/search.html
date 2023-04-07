@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>Search Results</title>
+		</head>
+		<style>
+			body{
+			  background-color: rgb(237, 250, 49);
+			}
+		  </style>
+		<body>
+			<h1>Search Results</h1>
+			{{ if . }}
+				<ul>
+				{{ range . }}
+					<li>Price:{{ .Price }} ТГ - raiting: {{.rating}}</li>
+				{{ end }}
+				</ul>
+			{{ else }}
+				<p>No results found.</p>
+			{{ end }}
+		</body>
+		</html>
